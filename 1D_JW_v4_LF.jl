@@ -32,7 +32,7 @@ function OneD_JW_v4_LF(param, δx, δt, bdy, m, A0, B0) # bdy is boundary, size 
     T1 = zeros(Float64, n, n)
     T1[1,1] = 1
     T1[n,n] = 1
-    for i in 2:n-1 # filling in the elements of the matrix T₁ (LHS matrix)
+    for i in 2:n-1 # filling in the elements of the matrix
         T1[i,i-1] = -k
         T1[i,i] = 1+2*k
         T1[i, i+1] = -k
