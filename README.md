@@ -1,1 +1,3 @@
 Note the "test_script_for" scripts are for running the actual function coded within the other files
+SJW is the 1D model in spherical coordinate
+1D_JW refers to 1D Cartesian model, similarly for 2D and 3D
