@@ -468,7 +468,7 @@ function ThreeDimCartesianJW(param, δx, δy, δz, δt, x_bdy, y_bdy, z_bdy, i, 
 
         if contour=="true"              # NOTE THE E_M HERE DO NOT REFER TO MAGNETIC ENERGY, BUT RATHER |B|
             if rem(j,10) == 0
-                for zcomp in [51] 
+                for zcomp in [51]  # showing the middle cross sections as contours
                     E_m = zeros(length(x_range), length(y_range))
                     fig_em = Figure()
                     ax_em = Axis(fig_em[1,1], title="z = $(round(z_range[zcomp],sigdigits=3)), t = $(round((j-1)*δt,sigdigits=3))", xlabel="x", ylabel="y",
