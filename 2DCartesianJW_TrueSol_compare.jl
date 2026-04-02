@@ -152,7 +152,7 @@ function TwoDimCartesianJW_Truesol_comp(param, δx, δy, δt, x_bdy, y_bdy, i, A
 
         D = α0
 
-        for k in 1:iter_steps # loop for ADI, the auto termination of the loop upon error going under the tolerance level is not implemented here, instead we simply used a large number of iterations
+        for k in 1:iter_steps # loop for ADI, the auto termination of the loop upon error going under the tolerance level is not implemented here, instead we simply used a large number of iterations that appear to be enough
             Anew_container = adi_eqn_A_y!(A_container, Anew_container, B_container, τ, m_pts, n_pts, M1_inv, D, δt, x_range, y_bdy_condi, c1,c2,ψ)
             Anew_container = adi_eqn_A_x!(A_container, Anew_container, B_container, τ, m_pts, n_pts, M2_inv, D, δt, x_range, x_bdy_condi, c1,c2,ψ)
             Bnew_container = adi_eqn_B_y!(B_container, Bnew_container, A_container, Anew_container, κ, λ, m_pts, n_pts, M1_inv, D, δt, x_range, y_bdy_condi, c1,c2,ψ)
