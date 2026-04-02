@@ -15,7 +15,7 @@ function u(invar; amp=0.0, phase=0.0, freq = 1.7, l=i, m=m_pts, n=n_pts)       #
                 
                 output[lloop,mloop,nloop] = (invar*(1 + (amp/invar)*cos(2*pi*freq*(lloop)*δt) + (amp/invar)*sin(2*pi*freq*(lloop)*δt))) *
                 (sin((nloop-1)*δx))*(mloop-1)*δy
-                # this corresponds to u = sin(x)*z
+                # this corresponds to u = sin(x)*z as we set the amplitudes of time dep. to 0 by default
             end
         end
     end
