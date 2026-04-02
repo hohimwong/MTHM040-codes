@@ -1,6 +1,7 @@
 using CairoMakie
 using LinearAlgebra
 using Statistics
+# code for the JW91 model in spherical coordinate
 # ∂A/∂x term treated using forward in space
 
 function ω(m, δt; amp1 = 0.1, amp2 = 0.1, freq = 1/11)      # non-dimensional function describing the time dependence of omega
