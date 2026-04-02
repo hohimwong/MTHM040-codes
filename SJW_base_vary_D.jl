@@ -15,7 +15,7 @@ D_range = LinRange(0,5000,51)
 for j in 1:length(D_range)
     param = [-D_range[j],1,1,1,1]
 
-    results = SJW_v5_LF(param, δq, δt, bdy, m, A0, B0, bdy_condi, a1=0.5,a2=0.5,fq=0.5,EqA_sat_coeff=0,EqB_sat_coeff=1)
+    results = SJW_v5_LF(param, δq, δt, bdy, m, A0, B0, bdy_condi, a1=0.0,a2=0.0,fq=0.5,EqA_sat_coeff=0,EqB_sat_coeff=1)
     A_results = copy(results[1])
     B_results = copy(results[2])
     transient_steps = 0
