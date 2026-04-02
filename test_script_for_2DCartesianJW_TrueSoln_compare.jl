@@ -23,7 +23,7 @@ for l in 1:m_pts
     end
 end
 B0 = copy(A0)
-
+# 50 ADI iterations appear to be sufficient
 results = TwoDimCartesianJW_Truesol_comp(param, δx, δy, δt, x_bdy, y_bdy, i, A0, B0, x_bdy_condi, y_bdy_condi, κ=1, τ=0, λ=1, iter_steps=50, source_term_switch=0, update=1)
 A_results = results[1]
 B_results = results[2]
