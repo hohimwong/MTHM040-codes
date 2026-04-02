@@ -142,7 +142,7 @@ function TwoDJW_alp2ome_v3(param, δx, δy, δt, x_bdy, y_bdy, i, A0, B0, x_bdy_
     end
 
     α_container = α(1) # creating the arrays for α and u
-    u_container = u(ω0) # ω is 1 anyways
+    u_container = u(ω0) # ω0 is 1 anyways
 
     # create coefficient matrix
     M1 = zeros(m_pts,n_pts)
