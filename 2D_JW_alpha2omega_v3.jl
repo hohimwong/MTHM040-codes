@@ -1,7 +1,7 @@
 using CairoMakie
 using Statistics
 using LinearAlgebra
-# this code corresponds to the case of choosing α and u that match JW91 (ϵ set as 0)
+# this code corresponds to the case of choosing α and u that match JW91 (ϵ is 0 by default)
 # note that the "y" here corresponds to "z" in the actual model, and the code no longer has a switch for source terms !
 # the 2D codes also use n for x and m for y
 
