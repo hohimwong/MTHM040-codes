@@ -31,22 +31,6 @@ error_list = results[3]
 max_numer_soln_list = results[4]
 max_true_soln_list = results[5]
 transient_steps = 0
-B_results_matrix_y = zeros(i+1-transient_steps, n_pts)
-B_results_matrix_x = zeros(i+1-transient_steps, n_pts)
-x_cross_sec = 40
-y_cross_sec = 40 # can be changes to the desired index to show a differnt cross section
-for l in 1:i+1-transient_steps
-    B_results_matrix_y[l,:] = B_results[l+transient_steps][y_cross_sec,:]
-end
-
-for l in 1:i+1-transient_steps
-    B_results_matrix_x[l,:] = B_results[l+transient_steps][:,x_cross_sec]
-end
-
-A_results_matrix = zeros(i+1-transient_steps, n_pts)
-for l in 1:i+1-transient_steps
-    A_results_matrix[l,:] = A_results[l+transient_steps][y_cross_sec,:]
-end
 
 f5 = Figure()
 ax5 = Axis(f5[1,1], xlabel="t", ylabel="log of Maximum error |Aₜᵣᵤₑ-A|",xtickformat=values -> ["$(round(δt*(value+(transient_steps-1)), sigdigits=4))" for value in values ])
