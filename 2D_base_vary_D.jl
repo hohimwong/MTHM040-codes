@@ -4,7 +4,7 @@ include("2D_JW_alpha2omega_v3.jl")
 x_bdy = [0,pi]
 y_bdy = [0,0.5]
 δt = 0.001
-δx = (x_bdy[2] - x_bdy[1])/100 # 100 grid points seems enough
+δx = (x_bdy[2] - x_bdy[1])/100 
 δy = (y_bdy[2] - y_bdy[1])/100
 m_pts = round(Int, ((y_bdy[2] - y_bdy[1])/δy) + 1 )
 n_pts = round(Int, ((x_bdy[2] - x_bdy[1])/δx) + 1 ) # grid points 
