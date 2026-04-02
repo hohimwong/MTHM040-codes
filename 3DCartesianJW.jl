@@ -368,13 +368,13 @@ function ThreeDimCartesianJW(param, δx, δy, δz, δt, x_bdy, y_bdy, z_bdy, i, 
 
     α = α0 * cos.(x_range)
     αₓ = α0 * sin.(x_range)
-    u = zeros(l_pts,n_pts) # u = ω₀ z sin(x)
+    u = zeros(l_pts,n_pts) 
     for j in 1:l_pts
         for k in 1:n_pts
-            u[j,k] = ω0 * z_range[k] #* sin(x_range[j])
+            u[j,k] = ω0 * z_range[k] 
         end
     end
-    ω = ω0 *ones(l_pts)#* sin.(x_range)
+    ω = ω0 *ones(l_pts)
 
     # define the coefficients that will be used later in the ADI equations
     # The k coefficients are the same for all ADI equations, and the ones denoted by a b c corresponds to the A B C equations
