@@ -2,7 +2,7 @@ using LinearAlgebra
 using Statistics
 using CairoMakie
 # slightly altered version of the 3D code, where we test the diffusion component
-# the results do not match the expectation; there are likely errors in the code
+# the results do not fully match the expectations; there are likely errors in the code
 
 function ADI_eqn_A_x!(A_old, A_new, B_old, C_old, l_pts, m_pts, n_pts, x_bdy_condi, a1, a2, a3, a4, a5, a6, a7)
     # using lower case a b c to denote the coefficients
