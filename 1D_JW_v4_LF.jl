@@ -6,7 +6,7 @@ using Statistics
 # uses leapfrog for the A derivitive in the ∂B/∂t equation
 
 # non-dimensional function for time dep.
-function ω(m, δt; amp1 = 0.0, amp2 = 0.0, freq = 0.2) # adjust the amplitude/frequency of the time dependence here
+function ω(m, δt; amp1 = 0.0, amp2 = 0.0, freq = 0.2) # adjust the amplitude/frequency of the time dependence here by changing amp1 amp2 (amplitude) or freq (frequency)
 Ωᵣ = 1 + amp1*cos(2*pi*freq*(m-1)*δt) + amp2*sin(2*pi*freq*(m-1)*δt)
 return Ωᵣ
 end
