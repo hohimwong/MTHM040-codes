@@ -4,7 +4,7 @@ using Statistics
 using SpecialFunctions
 
 # the following code takes in the number of grid points, bdys and returns a matrix with the non-dimensional u
-# at each grid point. The formula is taken from Charbonneau (2010)
+# at each grid point. The formula is taken from Charbonneau (2010) as mentioned in the report
 
 function TwoD_diff_rot(mp, np, x_bdy, y_bdy, invar; Ωc = 0.8752, a2 = 0.1264, a4 = 0.1591, w = 0.1)
 
