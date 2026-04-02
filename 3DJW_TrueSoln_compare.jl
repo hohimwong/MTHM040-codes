@@ -488,7 +488,7 @@ function ThreeDimJWTrueSoln(param, δx, δy, δz, δt, x_bdy, y_bdy, z_bdy, i, A
             end
         end
         
-        if rem(j,10) == 0
+        if rem(j,10) == 0 # for true soln
 
             for zcomp in [51] 
                 B_m = zeros(length(x_range), length(y_range))
