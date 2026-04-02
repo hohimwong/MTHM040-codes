@@ -468,7 +468,7 @@ function ThreeDimCartesianJW(param, δx, δy, δz, δt, x_bdy, y_bdy, z_bdy, i, 
 
         if contour=="true"              # NOTE THE E_M HERE DO NOT REFER TO MAGNETIC ENERGY, BUT RATHER |B|
             if rem(j,10) == 0
-                for zcomp in [51] # Check
+                for zcomp in [51] 
                     E_m = zeros(length(x_range), length(y_range))
                     fig_em = Figure()
                     ax_em = Axis(fig_em[1,1], title="z = $(round(z_range[zcomp],sigdigits=3)), t = $(round((j-1)*δt,sigdigits=3))", xlabel="x", ylabel="y",
@@ -479,12 +479,12 @@ function ThreeDimCartesianJW(param, δx, δy, δz, δt, x_bdy, y_bdy, z_bdy, i, 
                             E_m[xcomp, ycomp] = sqrt(Anew_container[xcomp,ycomp,zcomp]^2 + Bnew_container[xcomp,ycomp,zcomp]^2 + Cnew_container[xcomp,ycomp,zcomp]^2)
                         end
                     end
-                    contour!(ax_em, E_m,colormap =:hsv,levels=30) # check whether if the transpose is needed and whether if it is right.
+                    contour!(ax_em, E_m,colormap =:hsv,levels=30) 
                     Colorbar(fig_em[2,1], colormap =:hsv, vertical=false,limits=(findmin(E_m)[1],findmax(E_m)[1]))
                     display(fig_em)
                 end
 
-                for xcomp in [51] # Check
+                for xcomp in [51] 
                     E_m = zeros(length(z_range), length(y_range))
                     fig_em = Figure()
                     ax_em = Axis(fig_em[1,1], title="x = $(round(x_range[xcomp],sigdigits=3)), t = $(round((j-1)*δt,sigdigits=3))", xlabel="y", ylabel="z",
@@ -495,12 +495,12 @@ function ThreeDimCartesianJW(param, δx, δy, δz, δt, x_bdy, y_bdy, z_bdy, i, 
                             E_m[ycomp, zcomp] = sqrt(Anew_container[xcomp,ycomp,zcomp]^2 + Bnew_container[xcomp,ycomp,zcomp]^2 + Cnew_container[xcomp,ycomp,zcomp]^2)
                         end
                     end
-                    contour!(ax_em, E_m,colormap =:hsv,levels=30) # check whether if the transpose is needed and whether if it is right.
+                    contour!(ax_em, E_m,colormap =:hsv,levels=30) 
                     Colorbar(fig_em[2,1], colormap =:hsv, vertical=false,limits=(findmin(E_m)[1],findmax(E_m)[1]))
                     display(fig_em)
                 end
 
-                for ycomp in [51] # Check
+                for ycomp in [51]
                     E_m = zeros(length(x_range), length(z_range))
                     fig_em = Figure()
                     ax_em = Axis(fig_em[1,1], title="y = $(round(y_range[ycomp],sigdigits=3)), t = $(round((j-1)*δt,sigdigits=3))", xlabel="x", ylabel="z",
@@ -511,7 +511,7 @@ function ThreeDimCartesianJW(param, δx, δy, δz, δt, x_bdy, y_bdy, z_bdy, i, 
                             E_m[xcomp, zcomp] = sqrt(Anew_container[xcomp,ycomp,zcomp]^2 + Bnew_container[xcomp,ycomp,zcomp]^2 + Cnew_container[xcomp,ycomp,zcomp]^2)
                         end
                     end
-                    contour!(ax_em, E_m,colormap =:hsv,levels=30) # check whether if the transpose is needed and whether if it is right.
+                    contour!(ax_em, E_m,colormap =:hsv,levels=30) 
                     Colorbar(fig_em[2,1], colormap =:hsv, vertical=false,limits=(findmin(E_m)[1],findmax(E_m)[1]))
                     display(fig_em)
                 end
